@@ -13,23 +13,10 @@ Ltmp1:
 	mov	rbp, rsp
 Ltmp2:
 	.cfi_def_cfa_register rbp
+	xor	eax, eax
 	mov	dword ptr [rbp - 4], 0
 	mov	dword ptr [rbp - 8], edi
 	mov	qword ptr [rbp - 16], rsi
-	mov	dword ptr [rbp - 20], 0
-LBB0_1:                                 ## =>This Inner Loop Header: Depth=1
-	cmp	dword ptr [rbp - 20], 10
-	jge	LBB0_4
-## BB#2:                                ##   in Loop: Header=BB0_1 Depth=1
-	mov	eax, dword ptr [rbp - 20]
-	mov	dword ptr [rbp - 24], eax
-## BB#3:                                ##   in Loop: Header=BB0_1 Depth=1
-	mov	eax, dword ptr [rbp - 20]
-	add	eax, 1
-	mov	dword ptr [rbp - 20], eax
-	jmp	LBB0_1
-LBB0_4:
-	xor	eax, eax
 	pop	rbp
 	ret
 	.cfi_endproc
