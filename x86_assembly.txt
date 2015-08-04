@@ -29,6 +29,14 @@
 %rip    |	%eip	|	instruction pointer
 %rflags	|
 
+// Register Variants
+
+|63..32|31..16|15-8|7-0|
+              |%ah.|%al|
+              |%ax.....|
+       |%eax...........|
+|%rax..................|
+
 
  --------------
 |    Syntax    |
