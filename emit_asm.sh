@@ -1,1 +1,1 @@
-cc -S -mllvm --x86-asm-syntax=intel hello_asm.c 
+cc -g -S -mllvm --x86-asm-syntax=intel hello_asm.c 
