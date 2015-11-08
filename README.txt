@@ -9,7 +9,7 @@
 
 %rax	  |	%eax	|	accumulator
 %rcx	  |	%ecx	|	counter
-%rdx	  | %edx	|	data
+%rdx	  |     %edx	|	data
 %rbx	  |	%ebx	|	base registor
 %rsp	  |	%esp	|	stack pointer
 %rbp	  |	%ebp	|	base pointer
