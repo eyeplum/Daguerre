@@ -26,8 +26,8 @@
 
 // Special Purpose Registers
 
-%rip    |	%eip	|	instruction pointer
-%rflags	|
+%rip      |	%eip	|	instruction pointer
+%rflags   |
 
 // Register Variants
 
