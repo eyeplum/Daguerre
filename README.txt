@@ -76,3 +76,23 @@ ret
 nop
 loop
 
+
+ ---------------------------
+|        Conventions        |
+ ---------------------------
+
+after call instruction:
+  %eip points at first instruction of function
+  %esp+4 points at first argument
+  %esp points at return address 
+after ret instruction:
+  %eip contains return address
+  %esp points at arguments pushed by caller
+  called function may have trashed arguments
+  %eax contains return value (or trash if function is void)
+  %ecx, %edx may be trashed
+  %ebp, %ebx, %esi, %edi must contain contents from time of call 
+Terminology:
+  %eax, %ecx, %edx are "caller save" registers
+  %ebp, %ebx, %esi, %edi are "callee save" registers
+
