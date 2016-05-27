@@ -37,7 +37,7 @@ popq	%rbp              ;; something like this happened: %rbp = %rbp + 8
                         ;; at this point, the value of %rax has already been over written by the second
                         ;; foo() function call, thus we have the `array[0] = 10` result
 
-;; This is actually a good example of the `undefined behavior` works under by coincidence
+;; This is actually a good example of the `undefined behavior` works by coincidence
 ;; surely, we should never count on this kind of behavior.
 
 ;; Is there a way to break this?
