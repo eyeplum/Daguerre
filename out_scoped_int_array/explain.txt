@@ -7,10 +7,10 @@ movl	$1, %edi          ;; store parameter of the first foo() function call to %e
 
                         ;; the first foo() function call
 
-pushq	%rbp              ;; because we are running in x86_64, something like this happens: %rbp = %rbp - 8
+pushq	%rbp              ;; because we are running in x86_64, something like this happened: %rbp = %rbp - 8
 leaq	-8(%rbp), %rax    ;; store the address of %rbp - 8 in %rax (this makes %rax referencing -8(%rbp))
 movl	%edi, -8(%rbp)    ;; store %edi in %rbp - 8
-popq	%rbp              ;; something like this happens: %rbp = %rbp + 8
+popq	%rbp              ;; something like this happened: %rbp = %rbp + 8
 
                         ;; end of the first foo() function call
 
@@ -21,7 +21,7 @@ movq	%rax, -16(%rbp)   ;; move the return value of the previous function call fr
 
                         ;; the second foo() function call
 
-pushq	%rbp              ;; because we are running in x86_64, something like this happens: %rbp = %rbp - 8
+pushq	%rbp              ;; because we are running in x86_64, something like this happened: %rbp = %rbp - 8
 leaq	-8(%rbp), %rax    ;; store the address of %rbp - 8 in %rax (this makes %rax referencing -8(%rbp))
 movl	%edi, -8(%rbp)    ;; store %edi in %rbp - 8
                         
@@ -30,7 +30,7 @@ movl	%edi, -8(%rbp)    ;; store %edi in %rbp - 8
                         ;; which is exactly the same as where the return value of the previous foo()
                         ;; function call stored
 
-popq	%rbp              ;; something like this happens: %rbp = %rbp + 8
+popq	%rbp              ;; something like this happened: %rbp = %rbp + 8
 
                         ;; end of the second foo() function call
 
