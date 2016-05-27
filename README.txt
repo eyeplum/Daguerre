@@ -43,9 +43,11 @@
  --------------
 
 // Intel
-
 operation destination, source
 	
+// AT&T
+operation source, destination
+
 	operation: 
 		an instruction
 	
